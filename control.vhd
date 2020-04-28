@@ -41,7 +41,7 @@ architecture Behavioral of control is
 begin
 process(op)
 begin
-    case op is
+    case op is -- R-type only, Other instrucion type will be ignored
     when "000000" => regWrite <= '1';
     when others => regWrite <='0';
     end case;
